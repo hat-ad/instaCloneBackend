@@ -5,8 +5,8 @@ require("./DB/connection");
 const server = express();
 
 //middlewares
+server.use(express.json());
 server.use(require("./router/auth"));
-server.use(express.json())
 
 server.listen(process.env.PORT || "8000", () => {
   console.log("listening on port 8000");
