@@ -7,6 +7,7 @@ const server = express();
 //middlewares
 server.use(express.json());
 server.use(require("./router/auth"));
+server.use(require("./router/post"));
 
 server.listen(process.env.PORT || "8000", () => {
   console.log("listening on port 8000");
